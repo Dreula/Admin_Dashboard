@@ -8,9 +8,12 @@ const adminRoutes = require('./routes/admin')
 const announcementRoutes = require('./routes/announcement')
 const volunteerRoutes = require('./routes/volunteer')
 const todoRoutes = require('./routes/todo')
+const cors = require('cors')
 
 //express app
 const app = express()
+
+app.use(cors())
 
 //middleware
 app.use(express.json())
