@@ -17,4 +17,4 @@
         "source": "/api/(.*)", 
         "destination": "/api" 
       }]
-  }
+  } 
