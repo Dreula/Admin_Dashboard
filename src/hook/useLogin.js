@@ -29,7 +29,7 @@ export const useLogin = () => {
         if (response.ok) {
             setIsLoading(false)
             // save the admin to local storage
-            localStorage.setItem('admin', JSON.parse(json))
+            localStorage.setItem('admin', JSON.stringify(json))
             // update the auth context
             dispatch({type: 'LOGIN', payload: json})
 
