@@ -9,7 +9,7 @@ const announcementRoutes = require('./routes/announcement')
 const volunteerRoutes = require('./routes/volunteer')
 const todoRoutes = require('./routes/todo')
 const cors = require('cors')
-
+const PORT = process.env.PORT || 3000
 //express app
 const app = express()
 
@@ -35,8 +35,8 @@ app.use('/api/todo', todoRoutes)
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         // listen for request
-        app.listen(process.env.PORT || 3000, () => {
-            console.log('Connected to DB & listening on port', process.env.PORT)
+        app.listen(PORT, () => {
+            console.log('Connected to DB & listening on port', PORT)
         })
     })
     .catch((error) =>{
