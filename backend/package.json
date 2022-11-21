@@ -6,10 +6,10 @@
   "scripts": {
     "build": "cd .. && npm run build",
     "install-client": "cd .. && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "server": "nodemon server.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\""
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix ..\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix ..\""
   },
   "keywords": [],
   "author": "",
