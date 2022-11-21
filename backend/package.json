@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd backend && npm run build",
-    "install-client": "cd backend && npm install",
+    "build": "cd .. && npm run build",
+    "install-client": "cd .. && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build && npm install",
     "server": "nodemon server.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\""
