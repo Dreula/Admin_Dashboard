@@ -8,8 +8,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd backend && npm run build",
+    "install-client": "cd backend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix backend\""
   },
   "keywords": [],
   "author": "",

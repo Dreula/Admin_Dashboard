@@ -89,7 +89,7 @@ const WebPosts = () => {
           To post new contents on the Website please use <strong>Hygraph</strong>
           <br />
           Link to: {' '}
-          <span className='text-blue-500 font-bold underline'><a href="https://app.hygraph.com/e8b59e740b7e4bc3a37c0f0134d3aee6/master" target="_blank">HYGRAPH</a></span>
+          <span className='text-blue-500 font-bold underline'><a href="https://app.hygraph.com/" target="_blank">HYGRAPH</a></span>
       </div>
 
       <div className='m-2 mx-auto md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl text-xl shadow-lg'>
