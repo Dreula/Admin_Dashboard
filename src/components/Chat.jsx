@@ -3,6 +3,7 @@ import { MdOutlineCancel } from 'react-icons/md';
 import { FaFacebookMessenger } from 'react-icons/fa'
 import { Button } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
+import { Link } from 'react-router-dom';
 
 const Chat = () => {
   const { currentColor } = useStateContext();
@@ -26,13 +27,16 @@ const Chat = () => {
         <span className='text-medium text-justify dark:text-gray-200' >To view messages go to <br />Manuyo Uno's facebook page inbox. </span>
         
         <div className="mt-5">
-          <Button
-            color="white"
-            bgColor={currentColor}
-            text="Facebook Page Inbox"
-            borderRadius="10px"
-            width="full"
-          />
+          <a onClick={() => window.open("https://bit.ly/3Ax1qua", "_blank")}>
+            <Button
+              color="white"
+              bgColor={currentColor}
+              text="Facebook Page Inbox"
+              borderRadius="10px"
+              width="full"
+            />
+          </a>
+          
         </div>
       </div>
     </div>
